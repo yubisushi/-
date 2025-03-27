@@ -1,0 +1,48 @@
+mport numpy as np
+arr = np.arange(10)
+
+print(arr)
+reverse = arr[::-1]
+
+print(reverse)
+
+arr_2 = np.arange(9)
+matrix_3 = arr_2.reshape(3,3)
+matrix_9 = arr_2.reshape(9,1)
+print(matrix_3)
+
+print(matrix_9)
+
+matrix = np.zeros((10,10))
+
+print(matrix)
+matrix[:,0] = 1
+matrix[:,-1] = 1
+matrix[0,:] = 1
+matrix[-1,:] = 1
+
+print(matrix) 
+
+chess_matrix = np.zeros((5,5))
+chess_matrix[1::2,::2] = 1
+chess_matrix[::2,1::2] = 1
+
+print(chess_matrix)
+
+vector = np.arange(10)
+vector[5:9] = -vector[5:9]
+
+print(vector)
+
+mat_1 = ([[4,5],[7,10]])
+mat_2 = ([[2,3],[1,5]])
+dot_product = np.dot(mat_1,mat_2)
+
+print(dot_product)
+
+import matplotlib.pyplot as plt
+x = np.linspace(-10,10,100)
+Y = 1/(1+np.exp(-x))
+Y_dif = Y*(1-Y)
+plt.plot(x,Y,x,Y_dif)
+plt.show()
